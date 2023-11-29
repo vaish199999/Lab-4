@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sunrise/Sunset Info</title>
+</head>
+<body>
+    <div class="background-images">
+        <img src="C:\Users\Dell\Desktop\Web assignment 4\360_F_184205846_wR34GtVxyXyeBW8rjDz8DXcWTblIMMq9.jpg" alt="Left Image" class="left-image">
+        <img src="C:\Users\Dell\Desktop\Web assignment 4\beautiful-sunset-tropical-beach-palm-260nw-1716193708.webp" alt="Right Image" class="right-image">
+    </div>
+    <div class="container">
+        <h1>Sunrise/Sunset Dashboard</h1>
+
+        <div class="search-container">
+            <form onsubmit="fetchSunriseSunsetInfo(); return false;">
+                <label for="searchInput">Enter Location:</label>
+                <input type="text" id="searchInput" placeholder="Enter location...">
+                <button type="submit">Get Sunrise/Sunset Info</button>
+            </form>
+        </div>
+
+        <div class="geolocation-container">
+            <button id="useCurrentLocationBtn" onclick="fetchCurrentLocation()">Use Current Location</button>
+        </div>
+
+        <div class="info-container">
+            <!-- Today's Sunrise/Sunset Info -->
+            <div class="today-info">
+                <h2>Today's Sunrise/Sunset Info</h2>
+                <p id="locationNameToday"></p>
+                <p>Sunrise: <span id="sunriseTimeToday"></span></p>
+                <p>Sunset: <span id="sunsetTimeToday"></span></p>
+                <p>Dawn: <span id="dawnTimeToday"></span></p>
+                <p>Dusk: <span id="duskTimeToday"></span></p>
+                <p>Day Length: <span id="dayLengthToday"></span></p>
+                <p>Solar Noon: <span id="solarNoonTimeToday"></span></p>
+                <p>Timezone: <span id="timezoneToday"></span></p>
+            </div>
+
+            <!-- Tomorrow's Sunrise/Sunset Info -->
+            <div class="tomorrow-info">
+                <h2>Tomorrow's Sunrise/Sunset Info</h2>
+                <p id="locationNameTomorrow"></p>
+                <p>Sunrise: <span id="sunriseTimeTomorrow"></span></p>
+                <p>Sunset: <span id="sunsetTimeTomorrow"></span></p>
+                <p>Dawn: <span id="dawnTimeTomorrow"></span></p>
+                <p>Dusk: <span id="duskTimeTomorrow"></span></p>
+                <p>Day Length: <span id="dayLengthTomorrow"></span></p>
+                <p>Solar Noon: <span id="solarNoonTimeTomorrow"></span></p>
+                <p>Timezone: <span id="timezoneTomorrow"></span></p>
+            </div>
+        </div>
+
+        <div class="error-container">
+            <p id="errorMessage"></p>
+        </div>
+        <!-- Example Credits Section in HTML -->
+<div id="credits">
+    <p>Sunrise/Sunset data provided by <a href="https://sunrisesunset.io/api" target="_blank">Sunrise/Sunset API</a></p>
+    <p>Location data provided by <a href="https://geocode.maps.co/" target="_blank">Geocode API</a></p>
+</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

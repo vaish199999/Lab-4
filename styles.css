@@ -1,0 +1,160 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #db2121;
+}
+
+/* Add these styles to position and style the left and right images */
+.background-images {
+    position: relative;
+}
+
+.left-image,
+.right-image {
+    position: absolute;
+    top: 0;
+}
+
+.left-image {
+    left: 0;
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.right-image {
+    right: 0;
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.search-container,
+.geolocation-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#searchInput {
+    padding: 8px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #fe752b;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.today-info,
+.tomorrow-info {
+    flex: 1;
+    padding: 20px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.sun-icon {
+    background-image: url('sun-icon.png'); /* Placeholder sun icon image */
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.error-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#errorMessge {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+/* Updated CSS for responsiveness */
+@media only screen and (max-width: 600px) {
+    .container {
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    .info-container {
+        flex-direction: column;
+    }
+
+    .today-info,
+    .tomorrow-info {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .search-container,
+    .geolocation-container {
+        margin-bottom: 10px;
+    }
+
+    label {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    #searchInput {
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .sun-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    #credits-container {
+        margin-top: 10px;
+    }
+
+    #credits-container p {
+        font-size: 12px;
+        margin: 3px;
+    }
+}
